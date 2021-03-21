@@ -1,0 +1,25 @@
+.category-container {
+  margin: 0 auto 25px auto;
+  width: 75vw;
+}
+
+.category {
+  font-size: 10.5pt;
+  opacity: 0.7;
+  padding: 2.5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #ffffff;
+  margin: 5px 15px;
+  transition: all 150ms;
+
+  &:not(.selected):hover {
+    opacity: 8;
+    background-color: #fff5f5;
+  }
+}
+
+.selected {
+  opacity: 1;
+  background-color: #e1d5d5;
+}

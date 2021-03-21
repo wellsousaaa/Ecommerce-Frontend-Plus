@@ -1,0 +1,47 @@
+.payment-form {
+  margin: 25px auto;
+  max-width: 35vw;
+  background-color: transparent;
+}
+
+.FormGroup {
+  width: 100%;
+  margin: 0 0 20px 0;
+  padding: 0;
+  border-style: none;
+}
+
+.FormRow {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 4px;
+  margin-top: 15px;
+  padding-left: 5px;
+  border: 1px solid #819efc;
+}
+
+.StripeElement--webkit-autofill {
+  background: transparent !important;
+}
+
+.StripeElement {
+  width: 100%;
+  padding: 11px 15px 11px 0;
+}
+
+.pay-button {
+  margin-top: 10px;
+  width: 15%;
+  border-radius: 5px;
+  height: 40px;
+  cursor: pointer;
+  border: 3px solid rgb(235, 224, 255);
+  background-color: rgba(235, 224, 255, 0.7);
+
+  &:hover {
+    background-color: rgba(235, 224, 255, 1);
+  }
+}

@@ -1,0 +1,53 @@
+@import "./placeholder.scss";
+
+.carousel-container {
+  max-width: 100vw;
+  margin: auto;
+}
+
+.carousel-item {
+  width: 100%;
+  text-align: right;
+  color: white;
+
+  .img {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 75vh;
+  }
+  h3 {
+    margin: 0;
+  }
+
+  .project-text {
+    filter: drop-shadow(2px 2px 4px black);
+    margin: 50px 50px 0 0;
+    width: 25%;
+  }
+}
+
+.index {
+  cursor: pointer;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  border: 1.5px solid #4ba39d;
+  margin: 0 5px;
+}
+
+.i-active {
+  border: 3px solid #4ba39d;
+}
+
+@media screen and (max-width: 550px) {
+  .project-text {
+    display: none;
+  }
+  .carousel-item .img {
+    height: 50vw;
+  }
+}
