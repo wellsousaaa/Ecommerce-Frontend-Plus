@@ -75,7 +75,8 @@ function PaymentForm(props) {
     <main>
       <h1> Pagamento </h1>
       <p style={{ textAlign: "center" }}>
-        Para demonstração qualquer número de cartão irá funcionar!
+        Para demonstração use "4242424242424242" como número de cartão que irá
+        funcionar!
       </p>
       {!success ? (
         <form
