@@ -1,5 +1,3 @@
-import Routes from "./Routes";
-
 const makeHeaders = (token) => {
   const myHeaders = new Headers();
 
@@ -11,9 +9,9 @@ const makeHeaders = (token) => {
 };
 
 const getProducts = async (number = null, random = null) => {
-  const route = `${Routes.main}/api/products/?${number ? `n=${number}` : "n"}${
-    random ? `&random=1` : "&random"
-  }`;
+  const route = `${process.env.API_ROUTE}/api/products/?${
+    number ? `n=${number}` : "n"
+  }${random ? `&random=1` : "&random"}`;
 
   console.log(route);
   const productsResponse = await fetch(route, {
@@ -27,9 +25,9 @@ const getProducts = async (number = null, random = null) => {
 };
 
 const getProductsByCategories = async (categories, number = 16) => {
-  const route = `${Routes.main}/api/products/?${number ? `n=${number}` : "n"}${
-    categories ? `&tags=${categories.join("-")}` : "&tags"
-  }`;
+  const route = `${process.env.API_ROUTE}/api/products/?${
+    number ? `n=${number}` : "n"
+  }${categories ? `&tags=${categories.join("-")}` : "&tags"}`;
 
   console.log(route);
   const productsResponse = await fetch(route, {
@@ -43,7 +41,7 @@ const getProductsByCategories = async (categories, number = 16) => {
 };
 
 const getPagination = async (url) => {
-  const pagination = await fetch(`${Routes.main}${url}`)
+  const pagination = await fetch(`${process.env.API_ROUTE}${url}`)
     .then((data) => data.json())
     .catch((err) => {
       console.log(err);
@@ -54,7 +52,7 @@ const getPagination = async (url) => {
 };
 
 const getProduct = async (id) => {
-  const product = await fetch(`${Routes.main}/api/products/${id}`)
+  const product = await fetch(`${process.env.API_ROUTE}/api/products/${id}`)
     .then((data) => data.json())
     .catch((err) => {
       console.log(err);
@@ -66,7 +64,7 @@ const getProduct = async (id) => {
 
 const getHomeProducts = async () => {
   const productsHome = await fetch(
-    `${Routes.main}/api/productshome/`
+    `${process.env.API_ROUTE}/api/productshome/`
   ).then((data) => data.json());
   console.log(productsHome);
 
@@ -75,7 +73,7 @@ const getHomeProducts = async () => {
 
 const getCategoryProducts = async (category) => {
   const productsCategory = await fetch(
-    `${Routes.main}/api/productscategory/${category}/`
+    `${process.env.API_ROUTE}/api/productscategory/${category}/`
   ).then((data) => data.json());
 
   return productsCategory;
