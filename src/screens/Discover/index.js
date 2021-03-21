@@ -15,10 +15,8 @@ function Categories() {
     const fetchData = async () => {
       setProductList([]);
       const products = await getProductsByCategories(List, 16);
-      console.log(products.data);
       setProductList(products.data.length ? products.data : null);
       setPagination(products.next);
-      console.log(products.next);
     };
 
     fetchData();

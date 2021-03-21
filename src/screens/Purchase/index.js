@@ -9,8 +9,6 @@ function Purchase() {
   const [Items] = useContext(CarContext);
   const [readyToPay, setReadyToPay] = useState(false);
 
-  console.log(Items);
-
   useEffect(
     () => () => {
       setReadyToPay(false);

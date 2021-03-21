@@ -13,12 +13,9 @@ const getProducts = async (number = null, random = null) => {
     number ? `n=${number}` : "n"
   }${random ? `&random=1` : "&random"}`;
 
-  console.log(route);
   const productsResponse = await fetch(route, {
     method: "GET",
-  }).catch((err) => {
-    console.log(err);
-  });
+  }).catch((err) => {});
 
   const products = await productsResponse.json();
   return products;
@@ -29,12 +26,9 @@ const getProductsByCategories = async (categories, number = 16) => {
     number ? `n=${number}` : "n"
   }${categories ? `&tags=${categories.join("-")}` : "&tags"}`;
 
-  console.log(route);
   const productsResponse = await fetch(route, {
     method: "GET",
-  }).catch((err) => {
-    console.log(err);
-  });
+  }).catch((err) => {});
 
   const products = await productsResponse.json();
   return products;
@@ -44,7 +38,6 @@ const getPagination = async (url) => {
   const pagination = await fetch(`${process.env.API_ROUTE}${url}`)
     .then((data) => data.json())
     .catch((err) => {
-      console.log(err);
       return false;
     });
 
@@ -55,7 +48,6 @@ const getProduct = async (id) => {
   const product = await fetch(`${process.env.API_ROUTE}/api/products/${id}`)
     .then((data) => data.json())
     .catch((err) => {
-      console.log(err);
       return false;
     });
 
@@ -66,7 +58,6 @@ const getHomeProducts = async () => {
   const productsHome = await fetch(
     `${process.env.API_ROUTE}/api/productshome/`
   ).then((data) => data.json());
-  console.log(productsHome);
 
   return productsHome.results;
 };
