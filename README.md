@@ -1,11 +1,13 @@
-![Store+ E-commerce Demo](https://wendelldesousa.netlify.app/static/media/ecommerce.c2e14ea9.webp)
+![Store+ E-commerce Demo](https://wendelldesousa.netlify.app/assets/ecommerce.webp)
 
 # Store+ E-commerce Demo
 
-Esse site é uma demonstração de um E-commerce que eu fiz usando ReactJS, a integração de pagamento é feita com a API da Stripe.
+This is a demo of an E-commerce that I made using ReactJS, the integration with payment is possible because of the Stripe API!
 
-LINK: [https://store-plus.netlify.app/](https://store-plus.netlify.app/)
+Esse site é uma demonstração de um E-commerce que eu fiz usando ReactJS, a integração de pagamento é feita com a API da Stripe!
+
+Link: [https://store-plus.netlify.app/](https://store-plus.netlify.app/)
 
 ## Credits
 
-Esse projeto foi feito por Wendell de Sousa :D
+Project made by [Wendell Sousa](https://github.com/wellsousaaa)
