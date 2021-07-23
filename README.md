@@ -1,4 +1,4 @@
-![Store+ E-commerce Demo](ecommerce.gif)
+![Store+ E-commerce Demo](e-commerce.gif)
 
 # Store+ E-commerce Demo
 
