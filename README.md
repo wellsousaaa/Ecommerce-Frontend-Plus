@@ -1,4 +1,4 @@
-![Store+ E-commerce Demo](https://wendelldesousa.netlify.app/assets/ecommerce.webp)
+![Store+ E-commerce Demo](ecommerce.gif)
 
 # Store+ E-commerce Demo
 
